@@ -1,10 +1,27 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-portfolio/.env
-.idea/modules.xml
-.idea/vcs.xml
-portfolio/.idea/inspectionProfiles/Project_Default.xml
-portfolio/.idea/modules.xml
-portfolio/.idea/portfolio.iml
-portfolio/.idea/vcs.xml
-portfolio/.idea/workspace.xml
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+.idea
+.gitignore
+.env
+.next
 
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
