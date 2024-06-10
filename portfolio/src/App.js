@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSun, faMoon, faBars, faInfoCircle, faProjectDiagram, faBlog, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faSun, faMoon, faBars, faInfoCircle, faProjectDiagram, faBlog, faEnvelope, faCircleUp} from '@fortawesome/free-solid-svg-icons';
 import { FloatButton } from 'antd';
 import 'antd/dist/reset.css'; // Ensure correct path for Ant Design styles
 import './App.css';
@@ -23,11 +23,20 @@ function App() {
         setIsDarkMode(!isDarkMode);
     };
 
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
+
     return (
         <div className={`App flex flex-col min-h-screen ${isDarkMode ? 'dark' : ''}`}>
             <nav className="fixed top-0 w-full navbar-switch p-4 flex justify-between items-center z-50">
                 <div className="flex items-center">
+                    <a href={"/"}>
                     <img src={`${process.env.PUBLIC_URL}/asset/image/Anime-Eupho-Logo.png`} alt="Logo" className="navbar-logo" />
+                    </a>
                 </div>
                 <div className="flex items-center">
                     <button onClick={toggleDarkMode} className="p-2 mr-4">
@@ -48,6 +57,11 @@ function App() {
                 style={{ right: 24, bottom: 24 }}
                 icon={<FontAwesomeIcon icon={faBars} />}
             >
+                <FloatButton
+                    icon={<FontAwesomeIcon icon={faCircleUp} />}
+                    tooltip="Top"
+                    onClick={scrollToTop}
+                />
                 <FloatButton
                     icon={<FontAwesomeIcon icon={faInfoCircle} />}
                     tooltip="About Me"
