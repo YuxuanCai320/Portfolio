@@ -1,0 +1,61 @@
+/* Contact.css */
+
+.contact-section {
+    @apply flex flex-col items-center justify-center p-8 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100;
+}
+
+.contact-header {
+    @apply text-4xl font-bold mb-4;
+}
+
+.contact-form {
+    @apply w-full max-w-lg mb-4;
+}
+
+.contact-form input,
+.contact-form textarea {
+    @apply w-full px-4 py-2 border border-gray-400 dark:border-gray-600 rounded focus:outline-none focus:border-yellow-500 dark:bg-gray-700 dark:text-gray-100;
+    border: 1px solid #A08475; /* Border color similar to the design */
+    color: #A08475; /* Text color similar to the design */
+}
+
+.contact-form button {
+    @apply bg-yellow-400 text-gray-800 font-bold py-2 px-4 rounded hover:bg-yellow-500;
+    background-color: #F4E0C9; /* Background color similar to the design */
+    color: #A08475; /* Text color similar to the design */
+}
+
+.contact-form button:disabled {
+    background-color: #ddd; /* Disabled button color */
+    cursor: not-allowed;
+}
+
+.contact-form button:hover:disabled {
+    background-color: #ddd; /* Disabled button hover color */
+}
+
+.contact-icons {
+    @apply flex flex-wrap justify-center space-x-8 mt-4; /* Horizontal layout with space between items */
+}
+
+.contact-item {
+    @apply flex items-center space-x-2; /* Flex layout with space between icon and text */
+    font-size: 0.875rem; /* Smaller font size */
+}
+
+.contact-item i {
+    @apply text-yellow-400 text-2xl; /* Smaller icon size */
+}
+
+.contact-item a {
+    @apply text-sm text-gray-800 dark:text-gray-100 no-underline; /* Smaller text size */
+}
+
+.contact-item a:hover {
+    @apply underline; /* Underline on hover for better UX */
+}
+
+.result-message {
+    @apply mt-4 text-lg;
+    color: #A08475; /* Text color similar to the design */
+}

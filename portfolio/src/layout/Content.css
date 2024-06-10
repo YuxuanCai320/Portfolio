@@ -1,0 +1,49 @@
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.project-item {
+    width: calc(33.333% - 30px); /* Ensure each project item takes up one third of the row, accounting for gap */
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 30px;
+}
+
+.project-body {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.blogs-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.blog-item {
+    width: calc(33.333% - 30px); /* Ensure each blog item takes up one third of the row, accounting for gap */
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 30px;
+}
+
+.slick-prev:before, .slick-next:before {
+    color: black; /* Change arrow color */
+}
+
+.slick-slide {
+    padding: 0 10px; /* Adjust padding between slides */
+}
+
+.project-card {
+    margin: 0 auto; /* Center project cards */
+    height: 100%;
+}
+

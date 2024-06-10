@@ -1,0 +1,51 @@
+.project-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* Ensure the card takes full height */
+}
+
+.project-image-container {
+    height: 380px; /* Adjust the height as needed */
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.project-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.project-body {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.project-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.project-description {
+    flex-grow: 1;
+    margin-bottom: 10px;
+}
+
+.project-footer {
+    margin-top: auto;
+}
+
+.slick-slide > div {
+    height: 100%;
+    display: flex;
+}
+
+.slick-slide > div > .project-card {
+    height: 100%;
+}
