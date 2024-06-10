@@ -33,7 +33,11 @@
     padding-right: 15px;
     margin-bottom: 30px;
 }
-
+.download-button{
+    @apply bg-yellow-400 text-gray-800 font-bold py-2 px-4 rounded hover:bg-yellow-500;
+    background-color: #F4E0C9;
+    color: #A08475;
+}
 .slick-prev:before, .slick-next:before {
     color: black; /* Change arrow color */
 }

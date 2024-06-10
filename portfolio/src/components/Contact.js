@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
-import './Contact.css'; // Import Contact.css
+import './Contact.css';
 
 function Contact() {
     const [name, setName] = useState('');
@@ -42,7 +42,7 @@ function Contact() {
 
     return (
         <div className="contact-section">
-            <h2 className="contact-header">Get in Touch</h2>
+            <h2 className="contact-header">Contact Me</h2>
             <form className="contact-form" onSubmit={handleSubmit}>
                 <div className="mb-4">
                     <input

@@ -63,13 +63,16 @@ function Content() {
                 <div className="mb-4" id="about-me">
                     <h2 className="text-xl font-bold">About Me</h2>
                     <p>Introduction & Background</p>
-                    <button className="btn-primary">Download CV</button>
+                    {/*open a new page to view CV*/}
+                    <a href="https://github.com/YuxuanCai320/Resume/blob/main/resume_(Yuxuan%20Cai).pdf" target="_blank" rel="noopener noreferrer" download>
+                        <button className="download-button">Download CV</button>
+                    </a>
                 </div>
                 <div className="mb-4" id="my-projects">
                     <h2 className="text-xl font-bold">My Projects</h2>
                     <Slider {...settings}>
-                        {projects.map(project => (
-                            <div key={project.id} className="px-2"> {/* Add padding for consistent spacing */}
+                    {projects.map(project => (
+                            <div key={project.id} className="px-2">
                                 <ProjectCard project={project} />
                             </div>
                         ))}
@@ -93,7 +96,7 @@ function Content() {
                     </div>
                 </div>
                 <div className="mb-4" id="contact-me">
-                    <Contact /> {/* Add Contact component */}
+                    <Contact />
                 </div>
             </div>
         </main>
