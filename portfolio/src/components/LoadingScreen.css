@@ -8,7 +8,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #fff; /* Change this based on your theme */
+    background-color: #fff;
     z-index: 1000;
 }
 
@@ -24,6 +24,12 @@
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+.loading-image {
+    width: 600px;
+    height: 600px;
+    object-fit: contain;
 }
 
 .loading-screen p {

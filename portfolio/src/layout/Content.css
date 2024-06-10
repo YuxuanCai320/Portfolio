@@ -39,15 +39,15 @@
     color: #A08475;
 }
 .slick-prev:before, .slick-next:before {
-    color: black; /* Change arrow color */
+    color: black;
 }
 
 .slick-slide {
-    padding: 0 10px; /* Adjust padding between slides */
+    padding: 0 10px;
 }
 
 .project-card {
-    margin: 0 auto; /* Center project cards */
+    margin: 0 auto;
     height: 100%;
 }
 

@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSun, faMoon, faBars, faInfoCircle, faProjectDiagram, faBlog, faEnvelope, faCircleUp} from '@fortawesome/free-solid-svg-icons';
+import { faSun, faMoon, faBars, faInfoCircle, faProjectDiagram, faBlog, faEnvelope, faCircleUp } from '@fortawesome/free-solid-svg-icons';
 import { FloatButton } from 'antd';
 import 'antd/dist/reset.css'; // Ensure correct path for Ant Design styles
 import './App.css';
 import Header from './layout/Header';
 import Content from './layout/Content';
 import Footer from './layout/Footer';
+import LoadingScreen from '../src/components/LoadingScreen'; // Import the LoadingScreen component
 
 function App() {
     const [isDarkMode, setIsDarkMode] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         if (isDarkMode) {
@@ -32,10 +34,11 @@ function App() {
 
     return (
         <div className={`App flex flex-col min-h-screen ${isDarkMode ? 'dark' : ''}`}>
+            {isLoading && <LoadingScreen />}
             <nav className="fixed top-0 w-full navbar-switch p-4 flex justify-between items-center z-50">
                 <div className="flex items-center">
-                    <a href={"/"}>
-                    <img src={`${process.env.PUBLIC_URL}/asset/image/Anime-Eupho-Logo.png`} alt="Logo" className="navbar-logo" />
+                    <a href="/">
+                        <img src={`${process.env.PUBLIC_URL}/asset/image/Anime-Eupho-Logo.png`} alt="Logo" className="navbar-logo" />
                     </a>
                 </div>
                 <div className="flex items-center">
@@ -47,7 +50,7 @@ function App() {
 
             <div className="mt-16">  {/* Margin to prevent content overlap */}
                 <Header />
-                <Content />
+                <Content onDataLoaded={() => setIsLoading(false)} />
                 <Footer />
             </div>
 

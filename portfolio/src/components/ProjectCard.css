@@ -3,12 +3,12 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%; /* Ensure the card takes full height */
+    height: 100%;
 }
 
 .project-image-container {
     position: relative;
-    height: 380px; /* Adjust the height as needed */
+    height: 380px;
     width: 100%;
     overflow: hidden;
     border-radius: 8px;

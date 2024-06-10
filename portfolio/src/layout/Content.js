@@ -5,10 +5,10 @@ import ProjectCard from '../components/ProjectCard';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Contact from '../components/Contact'; // Import Contact component
+import Contact from '../components/Contact';
 import './Content.css';
 
-function Content() {
+function Content({ onDataLoaded }) {
     const [projects, setProjects] = useState([]);
 
     useEffect(() => {
@@ -18,10 +18,12 @@ function Content() {
             const projectsData = [];
             snapshot.forEach(doc => projectsData.push({ id: doc.id, ...doc.data() }));
             setProjects(projectsData);
+            // Call onDataLoaded once data is fetched
+            onDataLoaded();
         });
 
         return () => unsubscribe();
-    }, []);
+    }, [onDataLoaded]);
 
     const settings = {
         dots: true,
@@ -71,7 +73,7 @@ function Content() {
                 <div className="mb-4" id="my-projects">
                     <h2 className="text-xl font-bold">My Projects</h2>
                     <Slider {...settings}>
-                    {projects.map(project => (
+                        {projects.map(project => (
                             <div key={project.id} className="px-2">
                                 <ProjectCard project={project} />
                             </div>
