@@ -79,11 +79,11 @@ function Contact() {
             <div className="contact-icons">
                 <div className="contact-item">
                     <i className="fas fa-phone"></i>
-                    <a href="tel:1234567890">123-456-7890</a>
+                    <a href="tel:6809103733">+1 (680) 910 3733</a>
                 </div>
                 <div className="contact-item">
                     <i className="fas fa-envelope"></i>
-                    <a href="mailto:example@example.com">example@example.com</a>
+                    <a href="mailto:yuxuancai123@gmail.com">yuxuancai123@gmail.com</a>
                 </div>
                 <div className="contact-item">
                     <i className="fab fa-linkedin"></i>
