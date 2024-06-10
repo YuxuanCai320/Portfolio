@@ -23,8 +23,8 @@ function Header() {
                     <Col md={6} className="text-center">
                         <Image src={`${process.env.PUBLIC_URL}/asset/image/photo.jpg`} fluid className="main-image" />
                     </Col>
-                    <Col md={3} className="text-center">
-                        <h2>Summary</h2>
+                    <Col md={3}  className="text-center">
+                        <h2 style={{color:'white'}}> Summary</h2>
                     </Col>
                 </Row>
             </Container>
