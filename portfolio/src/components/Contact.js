@@ -40,6 +40,18 @@ function Contact() {
             });
     };
 
+    const handleWeChatClick = () => {
+        const weChatId = 'IceFrost-Theny';
+        navigator.clipboard.writeText(weChatId)
+            .then(() => {
+                setResultMessage(`WeChat ID copied to clipboard!`);
+                window.open('weixin://', '_blank');
+            })
+            .catch((err) => {
+                console.error('Could not copy text: ', err);
+            });
+    };
+
     return (
         <div className="contact-section">
             <h2 className="contact-header">Contact Me</h2>
@@ -87,15 +99,11 @@ function Contact() {
                 </div>
                 <div className="contact-item">
                     <i className="fab fa-linkedin"></i>
-                    <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">Your LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/yuxuan-cai-499681268/" target="_blank" rel="noopener noreferrer">Yuxuan Cai</a>
                 </div>
                 <div className="contact-item">
                     <i className="fab fa-weixin"></i>
-                    <a href="https://weixin.qq.com" target="_blank" rel="noopener noreferrer">Your WeChat ID</a>
-                </div>
-                <div className="contact-item">
-                    <i className="fab fa-github"></i>
-                    <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">Your GitHub</a>
+                    <button onClick={handleWeChatClick} className="wechat-button">Your WeChat ID</button>
                 </div>
             </div>
         </div>

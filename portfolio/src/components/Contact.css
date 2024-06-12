@@ -59,3 +59,15 @@
     @apply mt-4 text-lg;
     color: #A08475; 
 }
+
+.wechat-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font: inherit;
+}
+
+.wechat-button:hover {
+    text-decoration: underline;
+}
