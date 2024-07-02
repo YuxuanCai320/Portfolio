@@ -2,12 +2,13 @@
     background-image: url('../../public/asset/image/background.jpeg');
     background-size: cover;
     background-position: center;
-    padding: 20px 0;
+    padding: 25px 0 3px 0 ;
 }
 
 .main-image {
     border-radius: 30px;
     margin: 0 auto;
+    /*margin-top: 40px;*/
 }
 
 .icons-row {
