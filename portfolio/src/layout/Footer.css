@@ -1,6 +1,6 @@
 footer {
-    background-color: #343a40; /* Dark background color */
-    color: #fff; /* White text color */
+    background-color: #343a40;
+    color: #fff;
 }
 
 footer h5 {
@@ -12,7 +12,7 @@ footer p {
 }
 
 .social-icons a {
-    color: #fff; /* White icon color */
+    color: #fff;
     margin: 0 0.5rem;
     transition: color 0.3s ease;
 }

@@ -83,9 +83,11 @@ function Contact() {
                         required
                     ></textarea>
                 </div>
-                <button type="submit" disabled={isSending}>
-                    {isSending ? 'Sending...' : 'Send'}
-                </button>
+                <div className={"text-center"}>
+                    <button className={"w-2/3 transition-all duration-500"} type="submit" disabled={isSending}>
+                        {isSending ? 'Sending...' : 'Send'}
+                    </button>
+                </div>
             </form>
             {resultMessage && <p className="result-message">{resultMessage}</p>}
             <div className="contact-icons">
