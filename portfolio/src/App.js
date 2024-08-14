@@ -38,7 +38,7 @@ function App() {
             <nav className="fixed top-0 w-full navbar-switch p-4 flex justify-between items-center z-50">
                 <div className="flex items-center">
                     <a href="/">
-                        <img src={`${process.env.PUBLIC_URL}/asset/image/Anime-Eupho-Logo.png`} alt="Logo" className="navbar-logo" />
+                        <img src={`${process.env.PUBLIC_URL}/asset/image/Coyote_logo.png`} alt="Logo" className="navbar-logo" />
                     </a>
                 </div>
                 <div className="flex items-center">
